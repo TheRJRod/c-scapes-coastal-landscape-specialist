@@ -1,259 +1,971 @@
 <!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
+<html lang="en" class="scroll-smooth">
+<head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "tertiary": "#705d00",
-                    "on-error-container": "#93000a",
-                    "outline-variant": "#c3c8ba",
-                    "surface-bright": "#fff8f4",
-                    "on-tertiary-container": "#4c3e00",
-                    "on-surface-variant": "#43493d",
-                    "error-container": "#ffdad6",
-                    "secondary-fixed-dim": "#9ed49c",
-                    "secondary-container": "#b4ebb1",
-                    "on-background": "#2b1700",
-                    "surface-tint": "#45672e",
-                    "tertiary-container": "#c9a900",
-                    "inverse-surface": "#442b0a",
-                    "on-secondary-container": "#3b6b3d",
-                    "background": "#fff8f4",
-                    "surface-container-highest": "#ffddba",
-                    "surface": "#fff8f4",
-                    "surface-container-low": "#fff1e6",
-                    "surface-container": "#ffead8",
-                    "on-secondary": "#ffffff",
-                    "on-tertiary-fixed": "#221b00",
-                    "error": "#ba1a1a",
-                    "on-surface": "#2b1700",
-                    "inverse-primary": "#aad28d",
-                    "primary-fixed": "#c5efa7",
-                    "on-primary-fixed-variant": "#2e4f18",
-                    "on-secondary-fixed": "#002106",
-                    "tertiary-fixed": "#ffe16d",
-                    "surface-container-lowest": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "on-secondary-fixed-variant": "#205025",
-                    "surface-dim": "#fed2a4",
-                    "on-tertiary-fixed-variant": "#544600",
-                    "surface-variant": "#ffddba",
-                    "tertiary-fixed-dim": "#e9c400",
-                    "secondary": "#38693b",
-                    "primary-container": "#3a5c24",
-                    "outline": "#73796c",
-                    "primary-fixed-dim": "#aad28d",
-                    "on-primary-fixed": "#0a2100",
-                    "on-primary": "#ffffff",
-                    "primary": "#24440e",
-                    "surface-container-high": "#ffe4c9",
-                    "on-error": "#ffffff",
-                    "inverse-on-surface": "#ffeedf",
-                    "secondary-fixed": "#b9f0b6",
-                    "on-primary-container": "#abd38e"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
-            }
-          },
-        },
-      }
-    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>C-Scapes Coastal Landscape Specialists</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            line-height: 1;
-            text-transform: none;
-            letter-spacing: normal;
-            word-wrap: normal;
-            white-space: nowrap;
-            direction: ltr;
-        }
-        .editorial-shadow {
-            box-shadow: 0 32px 64px -12px rgba(43, 23, 0, 0.06);
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-  </head>
-<body class="bg-surface font-body text-on-surface antialiased">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-[#fff8f4]/80 backdrop-blur-xl shadow-sm flex justify-between items-center px-6 py-4 w-full">
-<div class="flex items-center gap-3">
-<span class="material-symbols-outlined text-[#24440e]" data-icon="menu">menu</span>
-<span>C-Scapes Coastal Landscape Specialists </span>
-</div>
-<button class="bg-[#705d00] text-white px-4 py-2 rounded-full font-label text-sm font-bold active:scale-95 duration-150 transition-opacity hover:opacity-80">
-            Get a Quote
-        </button>
+  :root {
+    --moss: #1a3a0a;
+    --moss-mid: #2c5a18;
+    --moss-light: #4a7c2f;
+    --sage: #8aad6e;
+    --cream: #faf6ef;
+    --warm-white: #fffdf9;
+    --sand: #e8dcc8;
+    --gold: #b8860b;
+    --gold-light: #d4a017;
+    --bark: #3d2b1a;
+    --text-muted: #6b7a5e;
+  }
+ 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  body {
+    background: var(--cream);
+    color: var(--bark);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+ 
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+  }
+ 
+  /* === HEADER === */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.1rem 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(250, 246, 239, 0.85);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(138, 173, 110, 0.2);
+    transition: all 0.3s ease;
+  }
+ 
+  .logo-mark {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+ 
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--moss);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+ 
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--moss);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+ 
+  .logo-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+  }
+ 
+  .btn-primary {
+    background: var(--moss);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--moss-light); transform: translateY(-1px); }
+  .btn-primary:active { transform: scale(0.97); }
+ 
+  .btn-gold {
+    background: var(--gold);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.02em;
+    transition: all 0.2s ease;
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  .btn-gold:hover { background: var(--gold-light); }
+  .btn-gold:active { transform: scale(0.97); }
+ 
+  /* === HERO === */
+  .hero {
+    position: relative;
+    height: 100svh;
+    min-height: 640px;
+    overflow: hidden;
+  }
+ 
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.04);
+    animation: slowZoom 12s ease-out forwards;
+  }
+ 
+  @keyframes slowZoom {
+    from { transform: scale(1.04); }
+    to { transform: scale(1); }
+  }
+ 
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to top,
+      rgba(10, 25, 5, 0.88) 0%,
+      rgba(10, 25, 5, 0.45) 45%,
+      rgba(10, 25, 5, 0.15) 100%
+    );
+  }
+ 
+  .hero-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem 1.75rem 9rem;
+    animation: fadeUp 0.8s 0.3s both ease-out;
+  }
+ 
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+ 
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 0.75rem;
+  }
+ 
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 8vw, 3.2rem);
+    font-weight: 700;
+    color: white;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+ 
+  .hero-headline em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--sage);
+  }
+ 
+  .hero-sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    max-width: 340px;
+  }
+ 
+  /* === FLOATING STATS BAR === */
+  .stats-bar {
+    position: relative;
+    margin: -2.5rem 1rem 0;
+    z-index: 10;
+    background: white;
+    border-radius: 20px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 20px 60px rgba(26,58,10,0.14);
+    border: 1px solid rgba(138,173,110,0.15);
+  }
+ 
+  .stat-item {
+    text-align: center;
+    flex: 1;
+  }
+ 
+  .stat-item + .stat-item {
+    border-left: 1px solid rgba(138,173,110,0.2);
+  }
+ 
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--moss);
+    line-height: 1;
+  }
+ 
+  .stat-label {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-weight: 500;
+  }
+ 
+  /* === SECTIONS === */
+  section {
+    padding: 3.5rem 1.75rem;
+  }
+ 
+  .section-eyebrow {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--sage);
+    margin-bottom: 0.5rem;
+  }
+ 
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--moss);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.4rem;
+  }
+ 
+  .section-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+ 
+  /* === SERVICES GRID === */
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+ 
+  .service-card {
+    background: white;
+    border-radius: 18px;
+    padding: 1.4rem 1.25rem;
+    border: 1px solid rgba(138,173,110,0.15);
+    transition: all 0.25s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--moss);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+    transform-origin: left;
+  }
+ 
+  .service-card:hover { box-shadow: 0 12px 40px rgba(26,58,10,0.1); transform: translateY(-2px); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:active { transform: scale(0.98); }
+ 
+  .service-icon-wrap {
+    width: 44px;
+    height: 44px;
+    background: var(--cream);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    color: var(--moss);
+    border: 1px solid rgba(138,173,110,0.25);
+  }
+ 
+  .service-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--moss);
+    line-height: 1.3;
+  }
+ 
+  .service-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+ 
+  /* === FEATURED PROJECT === */
+  .project-card {
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 24px 60px rgba(26,58,10,0.15);
+  }
+ 
+  .project-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+  }
+ 
+  .project-card:hover .project-img { transform: scale(1.04); }
+ 
+  .project-badge {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    background: var(--gold);
+    color: white;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 12px;
+    border-radius: 100px;
+  }
+ 
+  .project-info {
+    background: white;
+    padding: 1.5rem;
+    border-top: 3px solid var(--moss);
+  }
+ 
+  .project-tag {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--sage);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+ 
+  .project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--moss);
+    margin-bottom: 0.5rem;
+  }
+ 
+  .project-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+ 
+  .link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--moss);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: gap 0.2s ease;
+  }
+  .link-arrow:hover { gap: 10px; }
+ 
+  /* === TESTIMONIAL === */
+  .testimonial-section {
+    background: var(--moss);
+    padding: 3.5rem 1.75rem;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .testimonial-section::before {
+    content: '"';
+    position: absolute;
+    top: -1rem;
+    right: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 14rem;
+    color: rgba(255,255,255,0.04);
+    line-height: 1;
+    pointer-events: none;
+  }
+ 
+  .stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 1.25rem;
+  }
+ 
+  .star {
+    color: var(--gold-light);
+    font-size: 1.1rem;
+  }
+ 
+  .testimonial-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.9);
+    line-height: 1.75;
+    margin-bottom: 1.75rem;
+  }
+ 
+  .testimonial-author {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--sage);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+ 
+  .testimonial-dots {
+    display: flex;
+    gap: 6px;
+    margin-top: 2rem;
+  }
+ 
+  .dot { width: 24px; height: 3px; border-radius: 3px; }
+  .dot-active { background: var(--sage); }
+  .dot-inactive { background: rgba(255,255,255,0.2); width: 8px; }
+ 
+  /* === PROCESS STEPS === */
+  .process-step {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(138,173,110,0.15);
+  }
+ 
+  .process-step:last-child { border-bottom: none; }
+ 
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--sand);
+    line-height: 1;
+    flex-shrink: 0;
+    width: 2rem;
+    text-align: right;
+  }
+ 
+  .step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--moss);
+    margin-bottom: 0.3rem;
+  }
+ 
+  .step-desc {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+ 
+  /* === CTA SECTION === */
+  .cta-section {
+    background: var(--bark);
+    padding: 3.5rem 1.75rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+ 
+  .cta-section::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; right: -60px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 2px solid rgba(138,173,110,0.15);
+    pointer-events: none;
+  }
+ 
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+  }
+ 
+  .cta-sub {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+ 
+  .btn-cta {
+    background: var(--sage);
+    color: var(--moss);
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+  }
+  .btn-cta:hover { background: white; }
+  .btn-cta:active { transform: scale(0.97); }
+ 
+  /* === CONTACT === */
+  .contact-section {
+    padding: 3rem 1.75rem;
+    background: white;
+  }
+ 
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 0;
+    text-decoration: none;
+    color: var(--bark);
+    border-bottom: 1px solid rgba(138,173,110,0.15);
+    transition: all 0.2s ease;
+  }
+  .contact-link:first-of-type { border-top: 1px solid rgba(138,173,110,0.15); }
+  .contact-link:hover { color: var(--moss); }
+  .contact-link:active { transform: scale(0.98); }
+ 
+  .contact-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--moss);
+    border: 1px solid rgba(138,173,110,0.2);
+  }
+ 
+  .contact-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+ 
+  .contact-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--moss);
+    margin-top: 1px;
+  }
+ 
+  .map-wrap {
+    margin-top: 1.75rem;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(138,173,110,0.2);
+    height: 220px;
+  }
+ 
+  .map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+ 
+  /* === FOOTER === */
+  footer {
+    background: var(--moss);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2.5rem 1.75rem 7rem;
+  }
+ 
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.25rem;
+  }
+ 
+  .footer-tagline {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--sage);
+    margin-bottom: 1.5rem;
+  }
+ 
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+ 
+  .footer-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 0.78rem;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .footer-links a:hover { color: var(--sage); }
+ 
+  .footer-copy {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.3);
+  }
+ 
+  /* === BOTTOM NAV === */
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(250,246,239,0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(138,173,110,0.2);
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.75rem 0.5rem 1.25rem;
+    box-shadow: 0 -8px 30px rgba(26,58,10,0.08);
+  }
+ 
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    text-decoration: none;
+  }
+  .nav-item:active { transform: scale(0.92); }
+ 
+  .nav-item.active {
+    background: var(--moss);
+  }
+ 
+  .nav-item.active .material-symbols-outlined { color: white; }
+  .nav-item.active .nav-label { color: white; }
+ 
+  .nav-item .material-symbols-outlined { color: var(--text-muted); font-size: 1.35rem; }
+  .nav-item .nav-label {
+    font-size: 0.58rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+ 
+  /* Divider line */
+  .divider {
+    width: 48px;
+    height: 3px;
+    background: var(--sand);
+    border-radius: 3px;
+    margin: 0 auto 2rem;
+  }
+ 
+  /* scroll padding for fixed header */
+  main { padding-top: 70px; }
+</style>
+</head>
+ 
+<body>
+ 
+<!-- HEADER -->
+<header>
+  <div class="logo-mark">
+    <div class="logo-icon">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M9 2 C5 2 2 5.5 2 9 C2 13 5 16 9 16 C13 16 16 13 16 9" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+        <path d="M9 6 L9 12 M6.5 9.5 Q9 6.5 11.5 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <div>
+      <div class="logo-text">C-Scapes</div>
+      <span class="logo-sub">Coastal Landscape Specialists</span>
+    </div>
+  </div>
+  <a href="#contact" class="btn-primary">Get a Quote</a>
 </header>
-<main class="pb-24">
-<!-- Hero Section -->
-<section class="relative h-[751px] w-full overflow-hidden">
-<img class="absolute inset-0 w-full h-full object-cover" data-alt="luxury backyard landscape with custom stone patio infinity pool and lush manicured gardens at sunset with warm atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhop2UooeM_Pwk8aEpIpi65s7MZU2tZpuJJleHpeEb9iOg0tZ9TlSm2-5Mb2KUdnPKkJykQVshytAO3Ca4qQTTOfWOHjsW0k8m-BpCiEZA2jVd-T7m3c6h1L5za5_BaTVPdWSjgZGzSPjhdeqi-T4BfRW51rp-Gq0sJ-hKxACBwc4LwkknALhxbfQlkWCqs-BupmceHX6OCejxHke-MZNhxeAb5HAgIUMTn2bHUzD6AHcW6ozYP46G5d5F-C1Avnyor2x_Alg6GMw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-[#24440e]/80 via-transparent to-transparent"></div>
-<div class="absolute inset-0 flex flex-col justify-end p-8 pb-16">
-<h1 class="font-headline text-4xl font-extrabold text-white leading-tight mb-6 tracking-tight">
-                    Your Dream Outdoor Oasis, <span class="italic font-light">Sculpted</span>
-</h1>
-<button class="bg-tertiary text-on-tertiary w-full py-5 rounded-full font-label font-bold text-lg shadow-xl active:scale-95 transition-all">
-                    Request a Quote
-                </button>
-</div>
-</section>
-<!-- Service Icon Grid -->
-<section class="px-6 py-16 bg-surface">
-<div class="grid grid-cols-2 gap-4">
-<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-start gap-4">
-<div class="bg-primary-container p-3 rounded-xl">
-<span class="material-symbols-outlined text-on-primary-container" data-icon="architecture">architecture</span>
-</div>
-<span class="font-headline font-bold text-[#24440e]">Landscape Design</span>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-start gap-4">
-<div class="bg-primary-container p-3 rounded-xl">
-<span class="material-symbols-outlined text-on-primary-container" data-icon="eco">eco</span>
-</div>
-<span class="font-headline font-bold text-[#24440e]">Lawn Maintenance</span>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-start gap-4">
-<div class="bg-primary-container p-3 rounded-xl">
-<span class="material-symbols-outlined text-on-primary-container" data-icon="foundation">foundation</span>
-</div>
-<span class="font-headline font-bold text-[#24440e]">Hardscaping</span>
-</div>
-<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-start gap-4">
-<div class="bg-primary-container p-3 rounded-xl">
-<span class="material-symbols-outlined text-on-primary-container" data-icon="opacity">opacity</span>
-</div>
-<span class="font-headline font-bold text-[#24440e]">Irrigation</span>
-</div>
-</div>
-</section>
-<!-- Featured Project -->
-<section class="px-6 py-8">
-<div class="flex justify-between items-end mb-6">
-<h2 class="font-headline text-2xl font-extrabold text-primary tracking-tight">Featured Project</h2>
-</div>
-<div class="relative rounded-3xl overflow-hidden editorial-shadow">
-<img class="w-full h-80 object-cover rounded-tl-3xl rounded-br-3xl" data-alt="Modern geometric stone staircase leading to a tiered riverfront garden with ornamental grasses and sleek outdoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJnUC7TxID6D1xnKLA16Ii3Q1IumakMkawP5f6b16H5wHben3C-Z_QZPM34bB_cxOi0o9djJqvXvdPLKDp0J7zDzvFi9R28Pi-dlNONeWnruwzEZB-KV9BN69pHsGGnZkCrjYTy6i8Op8K0dRAcqea8MXMu2xtwhTHim-SOkO3EzdV3EtTvG226THxQWQ_k_bACom7ylFgHkMZY9fhxw_GwEFIGoCbF8JyVB50jfEFRDjGsW7pOrT7tQ_BtTDqG5BhFsuW7LOi9dU"/>
-<div class="absolute bottom-0 left-0 right-0 p-6 bg-surface/90 backdrop-blur-md m-4 rounded-2xl">
-<h3 class="font-headline font-bold text-xl text-primary mb-1">The Riverside Garden</h3>
-<div class="flex justify-between items-center">
-<span class="text-sm text-on-surface-variant font-medium">Modern Waterfront Estate</span>
-<a class="text-secondary font-bold flex items-center gap-1 text-sm uppercase tracking-wider" href="#">
-                            View Details
-                            <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonial Slider -->
-<section class="py-16 bg-surface-container-low">
-<div class="px-6">
-<div class="bg-surface p-8 rounded-3xl border border-outline-variant/15 editorial-shadow">
-<div class="flex gap-1 mb-4 text-tertiary">
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="font-body text-lg italic text-on-surface mb-6 leading-relaxed">
-                        We are pleased to have chosen C-Scapes Coastal Landscape and Shawn Christopher for our retirement home landscape project. The overall experience met or exceeded our expectations, including the concept development process, discussion and selection of options, final design, budgeting, execution, coordinating the work of subcontractors, and quality and budget control. Shawn also provided us good guidance on other aspects of our home project when we requested it.  The excellent results we accomplished  would not had been possible without  Cscapes ground workers who are diligent, detail oriented, courteous and were always ready to assist with any request we had.  We will use CScape and Shawn Christopher for any future landscape need and recommend them without reservation.
-                    </p>
-<div class="flex items-center gap-4">
-<div>
-<p class="font-headline font-bold text-primary">Alejandra and Rixio</p>
-
-</div>
-</div>
-</div>
-<div class="flex justify-center gap-2 mt-8">
-<div class="w-8 h-1 bg-primary rounded-full"></div>
-<div class="w-2 h-1 bg-outline-variant rounded-full"></div>
-<div class="w-2 h-1 bg-outline-variant rounded-full"></div>
-</div>
-</div>
-</section>
-<!-- Secondary CTA -->
-<section class="px-6 py-16">
-<div class="bg-primary p-10 rounded-[2.5rem] text-center text-on-primary">
-<h2 class="font-headline text-3xl font-extrabold mb-4">Ready to Start?</h2>
-<p class="font-body opacity-90 mb-8 px-4">Let's build your vision together. Professional consultation is just a click away.</p>
-<button class="bg-surface text-primary w-full py-5 rounded-full font-label font-bold text-lg active:scale-95 transition-transform">
-                    Schedule a Consultation
-                </button>
-</div>
-</section>
-<!-- Quick Contact -->
-<section class="px-8 py-12 flex flex-col gap-6 items-center border-t border-primary/5">
-<a class="flex items-center gap-4 text-primary group" href="tel:1234567890">
-<div class="bg-primary-container p-3 rounded-full group-active:scale-90 transition-transform">
-<span class="material-symbols-outlined" data-icon="call">call</span>
-</div>
-<span class="font-headline font-bold text-xl">(361) 993-7800</span>
-</a>
-<a class="flex items-center gap-4 text-primary group" href="mailto:hello@cscapes.com">
-<div class="bg-primary-container p-3 rounded-full group-active:scale-90 transition-transform">
-<span class="material-symbols-outlined" data-icon="mail">mail</span>
-</div>
-<span class="font-headline font-bold text-xl">shawnccscapes@aol.com</span>
-</a>
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8770.804617336838!2d-97.369037!3d27.652648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8668f413f40f9109%3A0xc5e35558005d0c6a!2sC-Scapes%20Coastal%20Landscape%20Specialist!5e1!3m2!1sen!2sus!4v1775346842178!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
+ 
+<main>
+ 
+  <!-- HERO -->
+  <section style="padding: 0; position: relative; height: 100svh; min-height: 640px; margin-top: -70px;">
+    <img class="hero-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhop2UooeM_Pwk8aEpIpi65s7MZU2tZpuJJleHpeEb9iOg0tZ9TlSm2-5Mb2KUdnPKkJykQVshytAO3Ca4qQTTOfWOHjsW0k8m-BpCiEZA2jVd-T7m3c6h1L5za5_BaTVPdWSjgZGzSPjhdeqi-T4BfRW51rp-Gq0sJ-hKxACBwc4LwkknALhxbfQlkWCqs-BupmceHX6OCejxHke-MZNhxeAb5HAgIUMTn2bHUzD6AHcW6ozYP46G5d5F-C1Avnyor2x_Alg6GMw" alt="Luxury backyard landscape"/>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Corpus Christi, Texas · Est. 2005</p>
+      <h1 class="hero-headline">Your Dream Outdoor<br>Oasis, <em>Sculpted</em></h1>
+      <p class="hero-sub">C-Scapes Landscaping and Design offers professional design and construction of landscaping, swimming pools, ponds, spas, waterfalls, plus all varieties of decks, patios, shade structures, outdoor fire and water features, outdoor kitchens and ranch landscaping.</p>
+      <a href="#contact" class="btn-gold">Request a Free Consultation</a>
+    </div>
+  </section>
+ 
+  <!-- FLOATING STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num">20+</div>
+      <div class="stat-label">Years</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">500+</div>
+      <div class="stat-label">Projects</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">5★</div>
+      <div class="stat-label">Reviews</div>
+    </div>
+  </div>
+ 
+  <!-- SERVICES -->
+  <section id="services" style="padding-top: 3rem;">
+    <p class="section-eyebrow">What We Do</p>
+    <h2 class="section-title">Expert Services</h2>
+    <p class="section-sub">From initial concept to the finishing touch — complete outdoor transformations.</p>
+ 
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon-wrap">
+          <span class="material-symbols-outlined" style="font-size:1.3rem;">architecture</span>
+        </div>
+        <div class="service-name">Landscape Design</div>
+        <div class="service-desc">Custom plans tailored to your space and vision</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-wrap">
+          <span class="material-symbols-outlined" style="font-size:1.3rem;">eco</span>
+        </div>
+        <div class="service-name">Lawn Maintenance</div>
+        <div class="service-desc">Year-round care to keep your property pristine</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-wrap">
+          <span class="material-symbols-outlined" style="font-size:1.3rem;">foundation</span>
+        </div>
+        <div class="service-name">Hardscaping</div>
+        <div class="service-desc">Patios, paths, walls, and outdoor living spaces</div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon-wrap">
+          <span class="material-symbols-outlined" style="font-size:1.3rem;">water_drop</span>
+        </div>
+        <div class="service-name">Irrigation</div>
+        <div class="service-desc">Smart watering systems for coastal climates</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- FEATURED PROJECT -->
+  <section id="projects" style="padding-top: 1rem;">
+    <p class="section-eyebrow">Featured Work</p>
+    <h2 class="section-title">The Riverside Garden</h2>
+ 
+    <div class="project-card">
+      <div style="overflow:hidden; position:relative;">
+        <img class="project-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJnUC7TxID6D1xnKLA16Ii3Q1IumakMkawP5f6b16H5wHben3C-Z_QZPM34bB_cxOi0o9djJqvXvdPLKDp0J7zDzvFi9R28Pi-dlNONeWnruwzEZB-KV9BN69pHsGGnZkCrjYTy6i8Op8K0dRAcqea8MXMu2xtwhTHim-SOkO3EzdV3EtTvG226THxQWQ_k_bACom7ylFgHkMZY9fhxw_GwEFIGoCbF8JyVB50jfEFRDjGsW7pOrT7tQ_BtTDqG5BhFsuW7LOi9dU" alt="Riverside garden project"/>
+        <div class="project-badge">Featured Project</div>
+      </div>
+      <div class="project-info">
+        <div class="project-tag">Modern Waterfront Estate · Corpus Christi</div>
+        <div class="project-title">The Riverside Garden</div>
+        <p class="project-desc">A complete transformation featuring geometric stone staircases, tiered riverfront planting beds, ornamental grasses, and integrated LED landscape lighting.</p>
+        <a href="#contact" class="link-arrow">
+          Discuss Your Project
+          <span class="material-symbols-outlined" style="font-size: 1rem;">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- PROCESS -->
+  <section style="background: white; padding: 3.5rem 1.75rem;">
+    <p class="section-eyebrow">How It Works</p>
+    <h2 class="section-title">Our Process</h2>
+    <div class="divider"></div>
+ 
+    <div class="process-step">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Free Consultation</div>
+        <div class="step-desc">We visit your property, listen to your vision, and assess the space at no cost.</div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Custom Design</div>
+        <div class="step-desc">We create a tailored plan with options to match your budget.</div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Expert Installation</div>
+        <div class="step-desc">Our diligent crew executes with precision, coordinating all sub-contractors.</div>
+      </div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <div>
+        <div class="step-title">Ongoing Care</div>
+        <div class="step-desc">Maintenance plans keep your landscape thriving through the coastal seasons.</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- TESTIMONIAL -->
+  <div class="testimonial-section">
+    <div class="stars">
+      <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+    </div>
+    <p class="testimonial-text">"We are pleased to have chosen C-Scapes Coastal Landscape and Shawn Christopher for our retirement home landscape project. The overall experience met or exceeded our expectations, including the concept development process, discussion and selection of options, final design, budgeting, execution, coordinating the work of subcontractors, and quality and budget control. Shawn also provided us good guidance on other aspects of our home project when we requested it.  The excellent results we accomplished  would not had been possible without  Cscapes ground workers who are diligent, detail oriented, courteous and were always ready to assist with any request we had.  We will use CScape and Shawn Christopher for any future landscape need and recommend them without reservation."</p>
+    <div class="testimonial-author">— Alejandra &amp; Rixio</div>
+    <div class="testimonial-dots">
+      <div class="dot dot-active"></div>
+      <div class="dot dot-inactive"></div>
+      <div class="dot dot-inactive"></div>
+    </div>
+  </div>
+ 
+  <!-- CTA -->
+  <div class="cta-section">
+    <p class="section-eyebrow" style="color: var(--sage);">Ready to Begin?</p>
+    <h2 class="cta-title">Let's Build Your<br>Vision Together</h2>
+    <p class="cta-sub">Professional consultation is complimentary. Let's talk about your outdoor space.</p>
+    <button class="btn-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Schedule a Consultation</button>
+  </div>
+ 
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <p class="section-eyebrow">Get in Touch</p>
+    <h2 class="section-title">Contact Us</h2>
+ 
+    <a class="contact-link" href="tel:3619937800">
+      <div class="contact-icon-wrap">
+        <span class="material-symbols-outlined" style="font-size:1.2rem;">call</span>
+      </div>
+      <div>
+        <div class="contact-label">Call Us</div>
+        <div class="contact-value">(361) 993-7800</div>
+      </div>
+      <span class="material-symbols-outlined" style="margin-left:auto; color:var(--text-muted); font-size:1rem;">arrow_forward_ios</span>
+    </a>
+ 
+    <a class="contact-link" href="mailto:shawnccscapes@aol.com">
+      <div class="contact-icon-wrap">
+        <span class="material-symbols-outlined" style="font-size:1.2rem;">mail</span>
+      </div>
+      <div>
+        <div class="contact-label">Email</div>
+        <div class="contact-value">shawnccscapes@aol.com</div>
+      </div>
+      <span class="material-symbols-outlined" style="margin-left:auto; color:var(--text-muted); font-size:1rem;">arrow_forward_ios</span>
+    </a>
+ 
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8770.804617336838!2d-97.369037!3d27.652648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8668f413f40f9109%3A0xc5e35558005d0c6a!2sC-Scapes%20Coastal%20Landscape%20Specialist!5e1!3m2!1sen!2sus!4v1775346842178!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+ 
 </main>
-<!-- Footer -->
-<footer class="bg-[#24440e] text-[#fff8f4] w-full pt-12 pb-24 px-8 flex flex-col items-center text-center space-y-6">
-<span class="text-[#705d00] font-['Manrope'] font-black text-2xl tracking-tighter">C-Scapes Coastal Landscape Specialists</span>
-<div class="flex flex-col space-y-4">
-<a class="font-['Inter'] text-sm text-[#fff8f4]/70 hover:text-[#705d00] transition-colors underline-offset-4 hover:underline" href="#">Privacy Policy</a>
-<a class="font-['Inter'] text-sm text-[#fff8f4]/70 hover:text-[#705d00] transition-colors underline-offset-4 hover:underline" href="#">Terms of Service</a>
-<a class="font-['Inter'] text-sm text-[#fff8f4]/70 hover:text-[#705d00] transition-colors underline-offset-4 hover:underline" href="#">FAQ</a>
-</div>
-<p class="font-['Inter'] text-xs leading-relaxed opacity-60">
-            © 2026 C-Scapes Landscaping
-        </p>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">C-Scapes Coastal Landscape</div>
+  <div class="footer-tagline">Corpus Christi, Texas</div>
+  <div class="footer-links">
+    <a>Privacy Policy</a>
+    <a>Terms of Service</a>
+    <a>FAQ</a>
+  </div>
+  <div class="footer-copy">© 2026 C-Scapes Landscaping</div>
 </footer>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#fff8f4]/90 backdrop-blur-lg flex justify-around items-center px-4 pb-4 shadow-[0_-4px_24px_rgba(43,23,0,0.04)] rounded-t-3xl border-t-[0.5px] border-[#24440e]/10">
-<div class="flex flex-col items-center justify-center bg-[#705d00] text-white rounded-full p-3 mb-2 transform -translate-y-2 active:scale-90 transition-transform">
-<span class="material-symbols-outlined" data-icon="home">home</span>
-<span class="font-['Inter'] text-[8px] font-semibold uppercase tracking-widest mt-1">Home</span>
-</div>
-<div class="flex flex-col items-center justify-center text-[#24440e]/60 p-2 hover:text-[#38693b] active:scale-90 transition-transform">
-<span class="material-symbols-outlined" data-icon="landscape">landscape</span>
-<span class="font-['Inter'] text-[8px] font-semibold uppercase tracking-widest mt-1">Projects</span>
-</div>
-<div class="flex flex-col items-center justify-center text-[#24440e]/60 p-2 hover:text-[#38693b] active:scale-90 transition-transform">
-<span class="material-symbols-outlined" data-icon="format_list_bulleted">format_list_bulleted</span>
-<span class="font-['Inter'] text-[8px] font-semibold uppercase tracking-widest mt-1">Services</span>
-</div>
-<div class="flex flex-col items-center justify-center text-[#24440e]/60 p-2 hover:text-[#38693b] active:scale-90 transition-transform">
-<span class="material-symbols-outlined" data-icon="chat">chat</span>
-<span class="font-['Inter'] text-[8px] font-semibold uppercase tracking-widest mt-1">Contact</span>
-</div>
+ 
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a class="nav-item active">
+    <span class="material-symbols-outlined">home</span>
+    <span class="nav-label">Home</span>
+  </a>
+  <a class="nav-item">
+    <span class="material-symbols-outlined">landscape</span>
+    <span class="nav-label">Projects</span>
+  </a>
+  <a class="nav-item">
+    <span class="material-symbols-outlined">format_list_bulleted</span>
+    <span class="nav-label">Services</span>
+  </a>
+  <a class="nav-item">
+    <span class="material-symbols-outlined">chat</span>
+    <span class="nav-label">Contact</span>
+  </a>
 </nav>
-</body></html>
+</body>
+</html>
